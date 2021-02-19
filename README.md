@@ -2,6 +2,7 @@
 
 Petit exercice de listing de films avec :
 - tri par catégorie
+- pagination par 4, 8 ou 12 élements
 - bouton toggle "like/dislike"
 - bouton de suppression d'un film
 
