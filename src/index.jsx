@@ -28,6 +28,8 @@ const App = () => {
   //   const indexOfFirstPost = indexOfLastPost - perPage;
   //   const currentPosts = movies.slice(indexOfFirstPost, indexOfLastPost);
 
+  const initialList = movies;
+
   const [selectedCategory, setSelectedCategory] = useState("");
 
   const categoryOptions = new Map(movies.map((movie) => [movie.category]));
@@ -63,8 +65,8 @@ const App = () => {
       </Container>
       <Container>
         <Row>
-          {filteredCategories().map((film, i) => (
-            <MovieCard film={film} key={i} />
+          {filteredCategories().map((film) => (
+            <MovieCard film={film} initialList={initialList}/>
           ))}
         </Row>
       </Container>

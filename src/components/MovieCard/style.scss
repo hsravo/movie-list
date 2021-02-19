@@ -3,7 +3,7 @@ $hoverBlack: #282828;
 $myGrey: #444444;
 
 #cardShow {
-    min-height: 8rem;
+    min-height: 5rem;
     margin:1rem;
     border-radius:1rem;
     background-color: $myColor;
@@ -46,6 +46,12 @@ $myGrey: #444444;
             background-color:white !important;
             border:1px solid $myColor !important;
             transition:0.3s;
+        }
+    }
+    #gauge-chart5 {
+        svg {
+            height: 200px;;
+            width:200;
         }
     }
 }
