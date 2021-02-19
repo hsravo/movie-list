@@ -2,14 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./style.scss";
-import {
-  Container,
-  Row,
-  Button,
-  Form,
-  Dropdown,
-  DropdownButton,
-} from "react-bootstrap";
+import {Container,Row,Form} from "react-bootstrap";
 import NavHome from "./components/NavHome";
 import MovieCard from "./components/MovieCard";
 import movies from "./data/movies";
@@ -49,7 +42,6 @@ const App = () => {
       <Container>
         <Form id="categoryForm">
           <Form.Group controlId="selector">
-            <Form.Label>Catégorie</Form.Label>
             <Form.Control
               as="select"
               onChange={({ target }) => setSelectedCategory(target.value)}

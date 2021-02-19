@@ -4,11 +4,14 @@ $myGrey: #444444;
 
 #cardShow {
     min-height: 5rem;
+
+    max-width:30rem;
     margin:1rem;
     border-radius:1rem;
     background-color: $myColor;
     
     #cardBody {
+        justify-content:center;
         border: 1px solid $myGrey;
         border-radius: 1rem ;
         background-color: $myColor;
@@ -31,6 +34,21 @@ $myGrey: #444444;
     }
     #cardTitle {
         font-size:1.75rem;
+    }
+    #cardCategory {
+        font-family: 'DM Sans', sans-serif;
+        color:white;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        word-break: break-word;
+        overflow: hidden;
+        &:hover {
+            opacity:0.7;
+            transition:0.3s;
+        }
+    }
+    #cardCategory {
+        font-size:1.25rem;
     }
     #cardButton {
         font-family: 'DM Sans', sans-serif;
