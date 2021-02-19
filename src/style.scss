@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@700&display=swap');
+
+@import './components//MovieCard/style.scss';
+@import './components//NavHome/style.scss';
+
+$myColor: #232121;
+$hoverBlack: #282828;
+$myGrey: #444444;
+
+body {
+    background-color: $myColor;
+}
+
+#categoryForm {
+    margin:auto;
+    align-items: center;
+    #selector {
+        width:auto;
+        height:3rem;
+        font-family: 'DM Sans', sans-serif;
+        border: 0.5px solid $myGrey;
+        border-radius: 1rem ;
+        background-color: $myColor;
+        color:white;
+        &:hover {
+            background-color:$hoverBlack;
+            transition:0.3s;
+        }
+    }
+}
