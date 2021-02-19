@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./style.scss";
@@ -8,18 +8,6 @@ import MovieCard from "./components/MovieCard";
 import movies from "./data/movies";
 
 const App = () => {
-  // const [posts, setPosts] = useState([]);
-  // const [loading, setLoading] = useState(false);
-  //   const [currentPage, setCurrentPage] = useState(1);
-  //   const [perPage, setPerPage] = useState(4);
-
-  //   // useEffect(() => {
-
-  //   // }, []);
-
-  //   const indexOfLastPost = currentPage * perPage;
-  //   const indexOfFirstPost = indexOfLastPost - perPage;
-  //   const currentPosts = movies.slice(indexOfFirstPost, indexOfLastPost);
 
   const initialList = movies;
 

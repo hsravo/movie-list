@@ -2,74 +2,77 @@ $myColor: #232121;
 $hoverBlack: #282828;
 $myGrey: #444444;
 
-#cardShow {
-    min-height: 5rem;
-
-    max-width:30rem;
-    margin:1rem;
-    border-radius:1rem;
-    background-color: $myColor;
-    
-    #cardBody {
-        justify-content:center;
-        border: 1px solid $myGrey;
-        border-radius: 1rem ;
+.row {
+    display:flex;
+    justify-content: center;
+    #cardShow {
+        min-height: 5rem;
+        width:22rem;
+        margin:1rem;
+        border-radius:1rem;
         background-color: $myColor;
-        &:hover {
-            background-color:$hoverBlack;
-            transition:0.3s;
+        
+        #cardBody {
+            justify-content:center;
+            border: 1px solid $myGrey;
+            border-radius: 1rem ;
+            background-color: $myColor;
+            &:hover {
+                background-color:$hoverBlack;
+                transition:0.3s;
+            }
         }
-    }
-    #cardTitle {
-        font-family: 'DM Sans', sans-serif;
-        color:white;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        word-break: break-word;
-        overflow: hidden;
-        &:hover {
-            opacity:0.7;
-            transition:0.3s;
+        #cardTitle {
+            font-family: 'DM Sans', sans-serif;
+            color:white;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: break-word;
+            overflow: hidden;
+            &:hover {
+                opacity:0.7;
+                transition:0.3s;
+            }
         }
-    }
-    #cardTitle {
-        font-size:1.75rem;
-    }
-    #cardCategory {
-        font-family: 'DM Sans', sans-serif;
-        color:white;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-        word-break: break-word;
-        overflow: hidden;
-        &:hover {
-            opacity:0.7;
-            transition:0.3s;
+        #cardTitle {
+            font-size:1.75rem;
         }
-    }
-    #cardCategory {
-        font-size:1.25rem;
-    }
-    #cardButton {
-        font-family: 'DM Sans', sans-serif;
-        display:flex;
-        justify-content:center;
-        margin:auto;
-        color:white;
-        background-color:$myColor !important;
-        border:1px solid white !important;
-        border-radius: 0.5rem;
-        &:hover {
-            color:$myColor;
-            background-color:white !important;
-            border:1px solid $myColor !important;
-            transition:0.3s;
+        #cardCategory {
+            font-family: 'DM Sans', sans-serif;
+            color:white;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: break-word;
+            overflow: hidden;
+            &:hover {
+                opacity:0.7;
+                transition:0.3s;
+            }
         }
-    }
-    #gauge-chart5 {
-        svg {
-            height: 200px;;
-            width:200;
+        #cardCategory {
+            font-size:1.25rem;
+        }
+        #cardButton {
+            font-family: 'DM Sans', sans-serif;
+            display:flex;
+            justify-content:center;
+            margin:auto;
+            color:white;
+            background-color:$myColor !important;
+            border:1px solid white !important;
+            border-radius: 0.5rem;
+            &:hover {
+                color:$myColor;
+                background-color:white !important;
+                border:1px solid $myColor !important;
+                transition:0.3s;
+            }
+        }
+        #gauge-chart5 {
+            svg {
+                height: 200px;;
+                width:200;
+            }
         }
     }
 }
