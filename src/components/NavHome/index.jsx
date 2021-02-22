@@ -3,6 +3,7 @@ import {Button} from "react-bootstrap";
 import "./style.scss";
 
 const NavHome = () => {
+
     return (
       <Navbar id="nav">
         <Navbar.Brand id="main-title">My Movie List</Navbar.Brand>

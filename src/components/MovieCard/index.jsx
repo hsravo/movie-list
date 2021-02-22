@@ -3,21 +3,28 @@ import { Card, Button, ProgressBar } from "react-bootstrap";
 import { Row, Col } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
+// import movies from "../../data/movies";
 import "./style.scss";
 
-const MovieCard = ({ film, initialList }) => {
-  const [list, setList] = useState(initialList);
+const MovieCard = ({ film, currentList, setCurrentList }) => {
 
   const handleRemove = (id) => {
-    const newList = list.filter((film) => film.id !== id);
-    setList(newList);
-    console.log(list);
+    const newList = currentList.filter((film) => film.id !== id);
+    setCurrentList(newList); // on change la liste du state à chaque suppression
   };
 
-  function kFormatter(num) {
+  const kFormatter = (num) => {
     return Math.abs(num) > 999
       ? Math.sign(num) * (Math.abs(num) / 1000).toFixed(1) + "k"
       : Math.sign(num) * Math.abs(num);
+  }
+
+  const likeIt = () => {
+    console.log("I like it")
+  }
+
+  const dislikeIt = () => {
+    console.log("I dislike it")
   }
 
   return (
@@ -30,11 +37,11 @@ const MovieCard = ({ film, initialList }) => {
                 <b>{film.title}</b>
               </Card.Title>
               <Card.Text id="cardCategory">{film.category}</Card.Text>
-              <Card.Text id="cardTitle">
-                <FontAwesomeIcon icon={faThumbsUp} />
+              <Card.Text id="cardSocial">
+                <FontAwesomeIcon icon={faThumbsUp} id="cardLike" type="checkbox" onClick={likeIt}/>
                 &nbsp;
                 <span>{kFormatter(film.likes)}&nbsp;</span>&nbsp;
-                <FontAwesomeIcon icon={faThumbsDown} />
+                <FontAwesomeIcon icon={faThumbsDown} id="cardDislike" onClick={dislikeIt}/>
                 &nbsp;
                 <span>{kFormatter(film.dislikes)}&nbsp;</span>
               </Card.Text>
@@ -42,7 +49,7 @@ const MovieCard = ({ film, initialList }) => {
                 <ProgressBar
                   striped
                   animated
-                  variant="dark"
+                  variant="info"
                   style={{ height: "10px" }}
                   now={(film.likes / (film.likes + film.dislikes)) * 100}
                 />

@@ -24,6 +24,7 @@ $myGrey: #444444;
         }
         #cardTitle {
             font-family: 'DM Sans', sans-serif;
+            font-size:1.75rem;
             color:white;
             text-overflow: ellipsis;
             white-space: nowrap;
@@ -34,8 +35,28 @@ $myGrey: #444444;
                 transition:0.3s;
             }
         }
-        #cardTitle {
-            font-size:1.75rem;
+        #cardSocial {
+            font-family: 'DM Sans', sans-serif;
+            font-size:1.5rem;
+            color:white;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            word-break: break-word;
+            overflow: hidden;
+            #cardLike {
+                &:hover {
+                    color:rgb(81, 197, 96);
+                    transition:0.3s;
+                    cursor:pointer;
+                }
+            }
+            #cardDislike {
+                &:hover {
+                    color:rgb(175, 68, 64);
+                    transition:0.3s;
+                    cursor:pointer;
+                }
+            }
         }
         #cardCategory {
             font-family: 'DM Sans', sans-serif;
