@@ -20,11 +20,11 @@ const MovieCard = ({ film, currentList, setCurrentList }) => {
   }
 
   const likeIt = () => {
-    console.log("I like it")
+    console.log("LIKE")
   }
 
   const dislikeIt = () => {
-    console.log("I dislike it")
+    console.log("DISLIKE")
   }
 
   return (
