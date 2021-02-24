@@ -30,6 +30,42 @@ body {
     }
 }
 
+#perPageForm {
+    display:flex;
+    justify-content:center;
+    #selector {
+        min-width:10rem;
+        height:3rem;
+        font-family: 'DM Sans', sans-serif;
+        border: 0.5px solid $myGrey;
+        border-radius: 1rem ;
+        background-color: $myColor;
+        color:white;
+        &:hover {
+            background-color:$hoverBlack;
+            transition:0.3s;
+        }
+    }
+}
+
+#pageForm {
+    display:flex;
+    justify-content:center;
+    #selector {
+        min-width:10rem;
+        height:3rem;
+        font-family: 'DM Sans', sans-serif;
+        border: 0.5px solid $myGrey;
+        border-radius: 1rem ;
+        background-color: $myColor;
+        color:white;
+        &:hover {
+            background-color:$hoverBlack;
+            transition:0.3s;
+        }
+    }
+}
+
 #reset-button {
     margin:auto;
     font-family: 'DM Sans', sans-serif;
