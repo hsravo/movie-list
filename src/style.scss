@@ -49,19 +49,25 @@ body {
 }
 
 #pageForm {
-    display:flex;
-    justify-content:center;
-    #selector {
-        min-width:10rem;
-        height:3rem;
-        font-family: 'DM Sans', sans-serif;
-        border: 0.5px solid $myGrey;
-        border-radius: 1rem ;
-        background-color: $myColor;
-        color:white;
-        &:hover {
-            background-color:$hoverBlack;
-            transition:0.3s;
+    .col {
+        display:flex;
+        justify-content: center;
+        #pageNumbers {
+            margin-right:1.5em;
+            display:inline-block;
+            text-align: center;
+            list-style: none;
+            min-width:2rem;
+            height:3rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size:2rem;
+            text-decoration: none;
+            color:white;
+            &:hover {
+                background-color:$hoverBlack;
+                text-decoration: underline;
+                cursor:pointer;
+            }
         }
     }
 }

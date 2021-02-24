@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import ReactDOM from "react-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./style.scss";
-import { Container, Row, Form, Button } from "react-bootstrap";
+import { Container, Row, Col, Form, Button } from "react-bootstrap";
 import NavHome from "./components/NavHome";
 import MovieCard from "./components/MovieCard";
 import movies from "./data/movies";
@@ -91,13 +91,20 @@ const App = () => {
           </Form.Group>
         </Form>
         <Form id="pageForm">
-          <Form.Group controlId="selector">
+          {/* <Form.Group controlId="selector">
             <Form.Control as="select" onChange={changePage} custom>
             {pageNumbers.map((number) => (
               <option value={number}>Page {number}</option>
             ))}
             </Form.Control>
-          </Form.Group>
+          </Form.Group> */}
+            <ul>
+            <Col>
+              {pageNumbers.map((number) => (
+                <li id="pageNumbers" onClick={changePage} value={number}>{number}</li>
+              ))}
+            </Col>
+            </ul>
         </Form>
       </Container>
       <Container>
