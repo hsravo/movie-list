@@ -32,10 +32,12 @@ const App = () => {
     if (currentPage !== 1) {
       setIdFirstElement(perPage * (currentPage - 1));
     }
+    else {
+      setIdFirstElement(0);
+    }
   }, [currentPage]);
 
   useEffect(() => {
-    console.log(`catégorie : ${selectedCategory}`);
     setCategoryOptions(new Map(currentList.map((movie) => [movie.category]))); // on refait la liste des catégories disponibles
   }, [currentList]); // à chaque changement de la liste des films (lire vers le haut)
 
@@ -91,13 +93,6 @@ const App = () => {
           </Form.Group>
         </Form>
         <Form id="pageForm">
-          {/* <Form.Group controlId="selector">
-            <Form.Control as="select" onChange={changePage} custom>
-            {pageNumbers.map((number) => (
-              <option value={number}>Page {number}</option>
-            ))}
-            </Form.Control>
-          </Form.Group> */}
             <ul>
             <Col>
               {pageNumbers.map((number) => (
